@@ -6,7 +6,6 @@ export type FilterStateKeys = 'korisniciTableFilter';
 
 export type FilterState = {
   korisniciTableFilter: Partial<FilterKorisniciRequest>;
-  // Ostali filteri, ako ih ima
 };
 
 const initialState: FilterState = {

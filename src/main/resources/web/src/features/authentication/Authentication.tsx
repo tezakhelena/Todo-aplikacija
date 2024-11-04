@@ -10,22 +10,22 @@ const Authentication: React.FC = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '100vh', // Full height to center vertically
-            backgroundColor: '#f0f2f5', // Optional: a light background color
+            height: '100vh',
+            backgroundColor: '#f0f2f5',
         }}>
             <Card title="Welcome" style={{ width: 300 }}>
                 <Button
                     type="primary"
                     block
-                    onClick={() => navigate('/registracija')} // Navigate to registration
+                    onClick={() => navigate('/registracija')}
                 >
                     Registracija
                 </Button>
                 <Button
                     type="default"
                     block
-                    onClick={() => navigate('/prijava')} // Navigate to login
-                    style={{ marginTop: '10px' }} // Optional: margin between buttons
+                    onClick={() => navigate('/prijava')}
+                    style={{ marginTop: '10px' }}
                 >
                     Prijava
                 </Button>

@@ -14,29 +14,29 @@ export const Registration = ({ form, onFinish }: Props) => {
                 <Form form={form} layout="vertical" onFinish={onFinish}>
                     <Form.Item
                         label="Ime"
-                        name="ime" // Make sure this matches your backend expected field
-                        rules={[{ required: true, message: 'Please enter your name!' }]}
+                        name="ime"
+                        rules={[{ required: true, message: 'Ime je obavezno!' }]}
                     >
-                        <Input placeholder="Unesite ime" />
+                        <Input placeholder="Unesite svoje ime" />
                     </Form.Item>
                     <Form.Item
                         label="Prezime"
-                        name="prezime" // Make sure this matches your backend expected field
-                        rules={[{ required: true, message: 'Please enter your surname!' }]}
+                        name="prezime"
+                        rules={[{ required: true, message: 'Prezime je obavezno!' }]}
                     >
-                        <Input placeholder="Unesite prezime" />
+                        <Input placeholder="Unesite svoje prezime" />
                     </Form.Item>
                     <Form.Item
                         label="Username"
-                        name="korisnickoIme" // Make sure this matches your backend expected field
-                        rules={[{ required: true, message: 'Please enter your username!' }]}
+                        name="korisnickoIme"
+                        rules={[{ required: true, message: 'Korisničko ime je obavezno!' }]}
                     >
                         <Input placeholder="Unesite korisničko ime" />
                     </Form.Item>
                     <Form.Item
                         label="Password"
-                        name="lozinka" // Make sure this matches your backend expected field
-                        rules={[{ required: true, message: 'Please enter your password!' }]}
+                        name="lozinka"
+                        rules={[{ required: true, message: 'Lozinka je obavezna!' }]}
                     >
                         <Input.Password placeholder="Unesite lozinku" />
                     </Form.Item>

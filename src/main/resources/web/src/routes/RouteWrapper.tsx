@@ -5,8 +5,8 @@ import { RootState } from "../store/store";
 import { getRouter } from "./createAppRouter";
 
 export const RouterWrapper = () => {
-    const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated); // Access Redux store
-    const router = useMemo(() => getRouter(isAuthenticated), [isAuthenticated]); // Memoize router based on authentication state
+    const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+    const router = useMemo(() => getRouter(isAuthenticated), [isAuthenticated]);
 
     return <RouterProvider router={router} />;
 };

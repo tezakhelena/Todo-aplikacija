@@ -13,18 +13,18 @@ export const Login = ({form, onFinish}: Props) => {
                 <Title level={2} style={{ textAlign: 'center' }}>Login</Title>
                 <Form form={form} layout="vertical" onFinish={onFinish}>
                     <Form.Item
-                        label="Username"
-                        name="korisnickoIme" // Make sure this matches your backend expected field
-                        rules={[{ required: true, message: 'Please enter your username!' }]}
+                        label="Korisničko ime"
+                        name="korisnickoIme"
+                        rules={[{ required: true, message: 'Korisničko ime je obavezno!' }]}
                     >
                         <Input placeholder="Unesite korisničko ime" />
                     </Form.Item>
                     <Form.Item
-                        label="Password"
-                        name="lozinka" // Make sure this matches your backend expected field
-                        rules={[{ required: true, message: 'Please enter your password!' }]}
+                        label="Lozinka"
+                        name="lozinka"
+                        rules={[{ required: true, message: 'Lozinka je obavezna!' }]}
                     >
-                        <Input.Password />
+                        <Input.Password placeholder="Unesite lozinku" />
                     </Form.Item>
                     <Form.Item>
                         <Button type="primary" htmlType="submit" block>

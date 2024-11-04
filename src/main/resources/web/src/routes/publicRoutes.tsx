@@ -19,7 +19,7 @@ export const publicRoutes = [
     },
     {
         path: '/',
-        element: <Navigate to="/authenticate" replace />, // Redirect to /authenticate
+        element: <Navigate to="/authenticate" replace />, // Redirect na /authenticate
     },
     {
         path: '*', // Catch-all for any unmatched routes
