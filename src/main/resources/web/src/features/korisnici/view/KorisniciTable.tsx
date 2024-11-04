@@ -1,16 +1,13 @@
 import { Card, Table } from "antd";
 import { ColumnsType } from "antd/es/table";
-import { EmptyDataTable } from "../../helpers/EmptyDataTable";
-import { Korisnik } from "../../types/types";
+import { Korisnik } from "../../../types/types";
+import { EmptyDataTable } from "../../../helpers/EmptyDataTable";
 
 interface Props {
     data: Korisnik[];
-    onShowModal: (value: boolean) => void;
 }
 
-export const KorisniciTable = ({ data, onShowModal }: Props) => {
-
-console.log(data);
+export const KorisniciTable = ({ data }: Props) => {
 
     const columns: ColumnsType<Korisnik> = [
         {
@@ -44,7 +41,7 @@ console.log(data);
     return (
         <Card title="Upravljanje korisnicima" bordered={false}>
             {!Array.isArray(data) || data.length === 0 ? (
-                <EmptyDataTable onShowModal={onShowModal} />
+                <EmptyDataTable />
             )
                 : (
                     <Table dataSource={data} columns={columns}/>

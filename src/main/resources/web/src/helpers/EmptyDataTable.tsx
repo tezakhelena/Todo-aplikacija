@@ -1,10 +1,6 @@
-import { Button, Empty, Typography } from "antd"
+import { Empty, Typography } from "antd"
 
-interface Props{
-    onShowModal: (value: boolean) => void;
-}
-
-export const EmptyDataTable = ({onShowModal}: Props) => {
+export const EmptyDataTable = () => {
     return (
         <Empty
             image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
@@ -15,7 +11,6 @@ export const EmptyDataTable = ({onShowModal}: Props) => {
                 </Typography.Text>
             }
         >
-            <Button type="default" onClick={() => onShowModal(true)}>Dodaj</Button>
         </Empty>
     )
 }

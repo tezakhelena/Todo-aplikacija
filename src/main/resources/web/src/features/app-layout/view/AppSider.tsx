@@ -2,6 +2,7 @@ import { HomeOutlined, UserOutlined } from "@ant-design/icons";
 import { Menu } from "antd";
 import { memo, useMemo } from "react";
 import { Link } from "react-router-dom";
+import style from '../style/AppLayout.module.css';
 
 export const AppSider = memo(() => {
 
@@ -33,10 +34,25 @@ export const AppSider = memo(() => {
         )
     }, []);
 
+    const zadaci = useMemo(() => {
+        return(
+            <>
+                {
+                    <Menu.Item key="zadaci" icon={<UserOutlined/>}>
+                        <Link to={"/zadaci"}>
+                            <span>Zadaci</span>
+                        </Link>
+                    </Menu.Item>
+                }
+            </>
+        )
+    }, []);
+
     return(
-        <Menu mode="inline" defaultSelectedKeys={["1"]} style={{backgroundColor: "#f0f0f0"}}>
+        <Menu mode="inline" defaultSelectedKeys={["1"]} className={style.sider}>
             {naslovnica}
             {korisnici}
+            {zadaci}
         </Menu>
     )
 })

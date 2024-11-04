@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { AppHeader } from './AppHeader';
 import { AppSider } from './AppSider';
-
+import style from'../style/AppLayout.module.css';
 const { Content, Footer, Sider } = Layout;
 
 const AppLayout: React.FC = () => {
@@ -20,14 +20,14 @@ const AppLayout: React.FC = () => {
     )
 
     return (
-        <Layout style={{ minHeight: '100vh' }}>
-            <Sider collapsible collapsed={collapsed} trigger={null} onCollapse={(value) => setCollapsed(value)} style={{ backgroundColor: "#f0f0f0" }}>
+        <Layout className={style.layout}>
+            <Sider collapsible collapsed={collapsed} trigger={null} onCollapse={(value) => setCollapsed(value)} className={style.sider}>
                 <AppSider />
             </Sider>
             <Layout>
                 <AppHeader />
                 {content}
-                <Footer style={{ textAlign: 'center' }}>
+                <Footer className={style.footer}>
                     Ant Design ©{new Date().getFullYear()} Created by Ant UED
                 </Footer>
             </Layout>

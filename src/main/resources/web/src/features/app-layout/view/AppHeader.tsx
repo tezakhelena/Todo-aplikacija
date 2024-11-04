@@ -1,8 +1,10 @@
 import { DownOutlined } from "@ant-design/icons";
-import { Button, Dropdown, Layout, Menu, Typography } from "antd"
+import { Button, Dropdown, Layout, Menu, Typography } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store/store";
-import { logout } from "../../store/slices/authSlice";
+import { Navigate } from "react-router-dom";
+import { logout } from "../../../store/slices/authSlice";
+import { RootState } from "../../../store/store";
+import style from '../style/AppLayout.module.css';
 
 export const AppHeader = () => {
 
@@ -13,18 +15,19 @@ export const AppHeader = () => {
 
     const handleLogout = () => {
         dispatch(logout());
+        <Navigate to="/authenticate" replace />
     };
 
     const menu = (
         <Menu>
             <Menu.Item key="logout" onClick={handleLogout}>
-                Logout
+                Odjavi se
             </Menu.Item>
         </Menu>
     );
 
     return(
-        <Header style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', paddingRight: '20px', backgroundColor: '#fff' }}>
+        <Header className={style.header}>
             <Dropdown overlay={menu} placement="bottomRight">
                 <Button type="text">
                     <Typography.Text>{username}</Typography.Text> <DownOutlined />

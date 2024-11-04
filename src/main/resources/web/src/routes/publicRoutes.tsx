@@ -1,8 +1,8 @@
 import { Navigate } from "react-router-dom";
-import Authentication from "../features/authentication/Authentication";
-import { LoginContainer } from "../features/authentication/LoginContainer";
+import Authentication from "../features/authentication/view/Authentication";
+import { LoginContainer } from "../features/authentication/container/LoginContainer";
 import ErrorPage from "../helpers/ErrorPage";
-import { RegistrationContainer } from "../features/authentication/RegistrationContainer";
+import { RegistrationContainer } from "../features/authentication/container/RegistrationContainer";
 
 export const publicRoutes = [
     {

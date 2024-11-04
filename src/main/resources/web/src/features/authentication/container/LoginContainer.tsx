@@ -1,9 +1,9 @@
 import { Form, notification } from "antd";
-import { Login } from "./Login"
+import { Login } from "../view/Login"
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import AuthenticationService from "./AuthenticationService";
-import { login } from "../../store/slices/authSlice";
+import { login } from "../../../store/slices/authSlice";
+import AuthenticationService from "../service/AuthenticationService";
 
 export const LoginContainer = () => {
     const [form] = Form.useForm();

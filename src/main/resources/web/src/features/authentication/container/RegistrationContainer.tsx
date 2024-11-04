@@ -1,6 +1,6 @@
 import { Form, notification } from "antd";
-import AuthenticationService from "./AuthenticationService";
-import { Registration } from "./Registration";
+import { Registration } from "../view/Registration";
+import AuthenticationService from "../service/AuthenticationService";
 
 export const RegistrationContainer = () => {
 
