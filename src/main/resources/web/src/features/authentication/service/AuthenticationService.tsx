@@ -1,14 +1,14 @@
 import axios from "axios";
 import { LoginRequest, RegistracijaRequest } from "../../../types/types";
-import { LOGIN, REGISTRACIJA } from "../../../reusable-components/constants";
+import { LOGIN_POST, REGISTRACIJA_POST } from "../../../reusable-components/constants";
 
 class AuthenticationService {
     login(request: LoginRequest) {
-        return axios.post(LOGIN, request);
+        return axios.post(LOGIN_POST, request);
     }
 
     registracija(request: RegistracijaRequest){
-        return axios.post(REGISTRACIJA, request)
+        return axios.post(REGISTRACIJA_POST, request)
     }
 }
 
