@@ -20,7 +20,7 @@ public interface ZadaciRepository extends JpaRepository<Zadaci, Long>  {
             "p.naziv_prioriteta as nazivPrioriteta, " +
             "s.vrijednost as status, " +
             "s.status_id as idStatusa, " +
-            "z.prioritet_id as idPrioriteta" +
+            "z.prioritet_id as idPrioriteta " +
             "from zadaci z  " +
             "left join korisnici k on z.korisnik_id = k.korisnik_id  " +
             "left join prioriteti p on z.prioritet_id = p.prioritet_id  " +
