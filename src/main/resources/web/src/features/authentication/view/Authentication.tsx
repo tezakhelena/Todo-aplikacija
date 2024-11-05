@@ -1,14 +1,16 @@
+import { Button, Card } from 'antd';
 import React from 'react';
-import { Card, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import style from '../style/Authentication.module.css';
+import Title from "antd/es/typography/Title"
 
 const Authentication: React.FC = () => {
     const navigate = useNavigate();
 
     return (
         <div className={style.div}>
-            <Card title="Welcome" style={{ width: 300 }}>
+            <Card style={{ width: 400 }} bordered={false}>
+            <Title level={2} style={{ textAlign: 'center' }}>Todo app</Title>
                 <Button
                     type="primary"
                     block

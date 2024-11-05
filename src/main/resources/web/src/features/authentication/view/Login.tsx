@@ -12,7 +12,7 @@ export const Login = ({form, onFinish}: Props) => {
     return(
         <div className={style.logindiv}>
             <Card style={{ width: 400 }}>
-                <Title level={2} style={{ textAlign: 'center' }}>Login</Title>
+                <Title level={2} style={{ textAlign: 'center' }}>Prijava</Title>
                 <Form form={form} layout="vertical" onFinish={onFinish}>
                     <Form.Item
                         label="Korisničko ime"

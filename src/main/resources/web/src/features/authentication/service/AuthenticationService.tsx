@@ -1,6 +1,6 @@
 import axios from "axios";
-import { LoginRequest, RegistracijaRequest } from "../../../types/types";
 import { LOGIN_POST, REGISTRACIJA_POST } from "../../../reusable-components/constants";
+import { LoginRequest, RegistracijaRequest } from "../../../types/request-types";
 
 class AuthenticationService {
     login(request: LoginRequest) {
