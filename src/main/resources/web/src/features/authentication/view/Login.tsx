@@ -10,8 +10,8 @@ interface Props{
 
 export const Login = ({form, onFinish}: Props) => {
     return(
-        <div className={style.logindiv}>
-            <Card style={{ width: 400 }}>
+        <div className={style.div}>
+            <Card style={{ width: 400 }} className={style.card}>
                 <Title level={2} style={{ textAlign: 'center' }}>Prijava</Title>
                 <Form form={form} layout="vertical" onFinish={onFinish}>
                     <Form.Item

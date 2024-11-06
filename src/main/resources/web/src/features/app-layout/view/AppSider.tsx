@@ -49,7 +49,7 @@ export const AppSider = memo(() => {
     }, []);
 
     return(
-        <Menu mode="inline" defaultSelectedKeys={["1"]} className={style.sider}>
+        <Menu mode="horizontal" defaultSelectedKeys={["1"]} className={style.sider}>
             {naslovnica}
             {korisnici}
             {zadaci}

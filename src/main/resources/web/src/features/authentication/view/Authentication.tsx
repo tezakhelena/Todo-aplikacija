@@ -9,7 +9,7 @@ const Authentication: React.FC = () => {
 
     return (
         <div className={style.div}>
-            <Card style={{ width: 400 }} bordered={false}>
+            <Card style={{ width: 400 }} bordered={false} className={style.card}>
             <Title level={2} style={{ textAlign: 'center' }}>Todo app</Title>
                 <Button
                     type="primary"

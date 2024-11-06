@@ -1,4 +1,4 @@
-const API = "https://876b-161-53-120-254.ngrok-free.app/api";
+const API = "http://localhost:8080/api";
 
 export const KORISNICI_POST = API + "/korisnici"; //za dohvat liste korisnika
 export const LOGIN_POST = KORISNICI_POST + "/login"; //za prijavu korisnika

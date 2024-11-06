@@ -10,8 +10,8 @@ interface Props {
 
 export const Registration = ({ form, onFinish }: Props) => {
     return (
-        <div className={style.logindiv}>
-            <Card style={{ width: 400 }}>
+        <div className={style.div}>
+            <Card style={{ width: 400 }} className={style.card}>
                 <Title level={2} style={{ textAlign: 'center' }}>Registracija</Title>
                 <Form form={form} layout="vertical" onFinish={onFinish}>
                     <Form.Item
@@ -29,7 +29,7 @@ export const Registration = ({ form, onFinish }: Props) => {
                         <Input placeholder="Unesite svoje prezime" />
                     </Form.Item>
                     <Form.Item
-                        label="Username"
+                        label="Korisničko ime"
                         name="korisnickoIme"
                         rules={[{ required: true, message: 'Korisničko ime je obavezno!' }]}
                     >

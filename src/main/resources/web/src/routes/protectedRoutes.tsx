@@ -11,7 +11,7 @@ export const protectedRoutes = [
             {
                 path: "/korisnici",
                 element: <KorisniciContainer />,
-            }
+            },
         ],
     },
 ];
